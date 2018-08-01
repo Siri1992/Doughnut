@@ -1,0 +1,10 @@
+#social-media {
+    display: inline-block;
+    width: 39%;
+    text-align: right;
+    vertical-align: bottom;
+    padding-bottom: 20px;
+}
+.clearfix {
+    zoom: 1;
+}

@@ -1,0 +1,16 @@
+.site-header{
+    background-color: rgba(0, 0, 0, .85) !important;
+    color:#ffffff !important;
+    font-family: 'dancing script', cursive;
+}
+a{
+    color:#ffffff;
+}
+/* .btn-outline-primary {
+    background-color: #f0f0f0;
+    color: #000000 !important;
+} */
+button[_ngcontent-c5]:hover{
+    background-color: #00f;
+    color: #fff;    
+}
