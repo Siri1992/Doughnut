@@ -1,0 +1,26 @@
+h2{
+    text-align: center;
+}
+.text-center {
+text-align: center!important;
+}
+.container{
+    background-color: #333 !important;
+    color: white;
+}
+.jumbotron{
+    background-color: #333 !important;
+    background: url("../../assets/background.jpg") no-repeat;
+    background-size:cover;
+    height:35em;
+    background-position:center; 
+}
+.topBuffer {
+    margin-top:6%;
+}
+.mt-5{
+    margin-top: 1rem!important;
+    margin-left: 4rem !important;
+    margin-bottom: 1rem !important;
+    color: #5bd1d3 !important;
+}
