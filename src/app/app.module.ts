@@ -7,26 +7,48 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { AboutComponent } from './about/about.component';
+import { FoodComponent } from './food/food.component';
+import { BeveragesComponent } from './beverages/beverages.component';
+import { CateringComponent } from './catering/catering.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
-let routes : Routes = [
-  {
-    path:"",
-    component:HomeComponent
-   },
-  ]
-
-
+const appRoutes: Routes = [
+  { path:'', component:HomeComponent},
+  { path: 'about', component: AboutComponent },
+  { path: 'food', component: FoodComponent },
+  { path: 'beverages', component: BeveragesComponent },
+  { path: 'catering', component: CateringComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '**', component: HomeComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    TopbarComponent,
+    AboutComponent,
+    FoodComponent,
+    BeveragesComponent,
+    CateringComponent,
+    ContactComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
