@@ -17,6 +17,7 @@ import { CateringComponent } from './catering/catering.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import {ImageZoomModule} from 'angular2-image-zoom';
 
 const appRoutes: Routes = [
   { path:'', component:HomeComponent},
@@ -43,10 +44,12 @@ const appRoutes: Routes = [
     ContactComponent,
     LoginComponent,
     RegisterComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ImageZoomModule, 
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule, MatTabsModule, MatGridListModule,
     RouterModule.forRoot(
@@ -55,6 +58,9 @@ const appRoutes: Routes = [
     )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[FoodComponent]
+
+
 })
 export class AppModule { }
