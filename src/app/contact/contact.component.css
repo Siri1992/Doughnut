@@ -1,0 +1,31 @@
+.mt-5{
+    margin-top: 1rem!important;
+    margin-left: 4rem !important;
+    margin-bottom: 1rem !important;
+    color: #5bd1d3 !important;
+}
+.example-small-box, .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }  
+  .example-small-box {
+    height: 100px;
+    width: 100px;
+  }
+  .example-large-box {
+    height: 300px;
+    width: 300px;
+  }
+  .example-action-button {
+    margin-bottom: 8px;
+  }
+  .mat-tab-group {
+    margin-left: 0% !important;
+}
+mat-grid-tile {
+  background: lightblue;
+}
