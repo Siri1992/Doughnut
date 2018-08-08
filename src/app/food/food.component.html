@@ -8,17 +8,22 @@
   </div>
 </div>
 <div class="container">
-  <p class="text-center">Food item list</p>
+  <div class="text-center">
+  <p class=" title-heading">Food item list</p>
+  </div>
   <div id="thumbnailsList" >
-      <div class="row">
+      <div class="row mb-3">
      <div *ngFor="let image of images" class="col-md-4" >
-        <img src="{{image.url}}"  class="tn  img-thumbnail"
-      
+       <div class="card">
+        <img src="{{image.url}}"  class="img-fluid"
       data-toggle="modal" data-target="#selectedImageModal"
-                (click)=setSelectedImage(image)>
+                (click)=setSelectedImage(image) alt="">
+                </div>
+                <button class="btn btn-primary float-right">Add to cart</button>
                 <p>title: {{image.title}}</p>
                 <p>Description: {{image.description}}</p>
                 <p>Price:{{image.price}}</p>
+                
      </div>
     </div>
     </div>
