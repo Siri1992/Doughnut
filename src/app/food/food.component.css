@@ -4,10 +4,19 @@
         width:100% !important;
         
     }
-    .modal-dialog{
-        margin: 20% 25%;
-     
-    }
+    .modal-dialog {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      
+      .modal-content {
+        margin: 0 auto;
+      }
+
+
+    
     .card img{
         height:300px !important;
     }
