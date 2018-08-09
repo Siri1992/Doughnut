@@ -1,4 +1,7 @@
-
+.btn-primary{
+    background-color:#275ab8;
+    margin-top: 35px;
+}
  
     .modal-body img{
         width:100% !important;

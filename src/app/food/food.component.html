@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header ">
-            <h4 class="modal-title text-center">Product Details</h4>
+            <h4 class="modal-title text-center" role="heading">Product Details</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
       <div class="modal-body">
@@ -14,17 +14,17 @@
 </div>
 <div class="container">
   <div class="text-center">
-  <p class=" title-heading">Food item list</p>
+  <h1 class=" title-heading" aria-label="Food Item List" >Food Item List</h1>
   </div>
-  <div id="thumbnailsList" >
+  <div id="thumbnailsList"  >
       <div class="row mb-3">
-     <div *ngFor="let image of images" class="col-md-4 col-xs-12" >
+     <div *ngFor="let image of images" class="col-md-4 col-xs-12" tabindex="0" >
        <div class="card">
         <img src="{{image.url}}"  class="img-fluid"
       data-toggle="modal" data-target="#selectedImageModal"
                 (click)=setSelectedImage(image) alt="">
                 </div>
-                <button class="btn btn-primary float-right">Add to cart</button>
+                <button class="btn btn-primary float-right" (click)=addItem()>Add to cart</button>
                 <p>title: {{image.title}}</p>
                 <p>Description: {{image.description}}</p>
                 <p>Price:{{image.price}}</p>

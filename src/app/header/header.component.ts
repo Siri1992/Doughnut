@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { FoodComponent } from '../food/food.component';
+import {CartService} from '../cart.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,13 @@ import {Router} from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private router:Router) { }
+ total:any;
+  constructor(private router:Router, private cartService:CartService) { 
+    this.total= cartService.getTotal;
+  }
 
   ngOnInit() {
   }
+
+
   }
