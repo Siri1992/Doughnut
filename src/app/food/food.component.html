@@ -1,24 +1,35 @@
-<div class="modal fade" id="selectedImageModal" style=" overflow-y: hidden" >
+<div class="modal fade" id="selectedImageModal" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+
         <div class="modal-header ">
             <h4 class="modal-title text-center" role="heading">Product Details</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
+
       <div class="modal-body">
          <img *ngIf="selectedImage" src="{{selectedImage.url}}" >
-         <p *ngIf="selectedImage" >{{selectedImage.description}}</p>
       </div>
     </div>
   </div>
 </div>
 <div class="container">
   <div class="text-center">
+
   <h1 class=" title-heading" aria-label="Food Item List" >Food Item List</h1>
   </div>
   <div id="thumbnailsList"  >
       <div class="row mb-3">
      <div *ngFor="let image of images" class="col-md-4 col-xs-12" tabindex="0" >
+
+  <p class=" title-heading">Food item list</p>
+  <input type="text" placeholder="Search your favorite food here....." [(ngModel)]='searchMe'/>
+  </div>
+  
+  <div id="thumbnailsList" >
+      <div class="row mb-3">
+     <div *ngFor="let image of images | searchfilter:searchMe" class="col-md-4" >
+
        <div class="card">
         <img src="{{image.url}}"  class="img-fluid"
       data-toggle="modal" data-target="#selectedImageModal"

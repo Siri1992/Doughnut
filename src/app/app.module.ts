@@ -17,7 +17,8 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {ImageZoomModule} from 'angular2-image-zoom';
-
+import { CartComponent } from './cart/cart.component';
+import { SearchfilterPipe } from './searchfilter.pipe';
 const appRoutes: Routes = [
   { path:'', component:HomeComponent},
   { path: 'about', component: AboutComponent },
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'cart', component:CartComponent },
   { path: '**', component: HomeComponent}
 ];
 @NgModule({
@@ -42,8 +44,9 @@ const appRoutes: Routes = [
     CateringComponent,
     ContactComponent,
     LoginComponent,
-    RegisterComponent
-
+    RegisterComponent,
+    CartComponent,
+    SearchfilterPipe
   ],
   imports: [
     BrowserModule,
