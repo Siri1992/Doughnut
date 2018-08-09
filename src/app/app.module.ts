@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {ImageZoomModule} from 'angular2-image-zoom';
+import { SearchfilterPipe } from './searchfilter.pipe';
 
 const appRoutes: Routes = [
   { path:'', component:HomeComponent},
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     CateringComponent,
     ContactComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchfilterPipe
 
   ],
   imports: [
