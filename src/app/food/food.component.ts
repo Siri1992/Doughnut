@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 //import {ImageZoomModule} from 'angular2-image-zoom';
 import {CartService} from '../cart.service';
-import {Observable} from 'rxjs/Observable';
+import { Observable} from 'rxjs'
 @Component({
   selector: 'app-food',
   templateUrl: './food.component.html',
@@ -11,10 +11,10 @@ import {Observable} from 'rxjs/Observable';
 export class FoodComponent implements OnInit {
  // smallImageSrc="http://localhost:4200/assets/library_01.jpeg"
 amount:number
-total:any;
+total:Observable<number>;
  images
   constructor(private cartService:CartService) {
-    this.total= cartService.getTotal;
+    this.total= cartService.getTotal();
 
       this.images = [
 	{"url":"../../assets/library_01.jpeg","title":"title1","description":"description1","price":"$20"},
@@ -41,8 +41,10 @@ total:any;
    setSelectedImage(image){
       this.selectedImage= image;	
    }
-   addItem(){
-    this.cartService.addItem({amount: 1});
-    console.log( this.cartService.addItem({amount: 1}))
+   addItem(image){
+     console.log(image)
+    this.cartService.addItem(image);
+    
+    // console.log( this.cartService.addItem({amount: 1}))
   }
 }

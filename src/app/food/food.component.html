@@ -17,16 +17,12 @@
   <div class="text-center">
 
   <h1 class=" title-heading" aria-label="Food Item List" >Food Item List</h1>
-  </div>
-  <div id="thumbnailsList"  >
-      <div class="row mb-3">
-     <div *ngFor="let image of images" class="col-md-4 col-xs-12" tabindex="0" >
-
-  <p class=" title-heading">Food item list</p>
-  <input type="text" placeholder="Search your favorite food here....." [(ngModel)]='searchMe'/>
+  <input type="text" placeholder="Search your favorite food here....." [(ngModel)]='searchMe' style="display:block; 
+  margin-left:30%
+  "/>
   </div>
   
-  <div id="thumbnailsList" >
+  <div id="thumbnailsList" style="padding-top: 10px;" >
       <div class="row mb-3">
      <div *ngFor="let image of images | searchfilter:searchMe" class="col-md-4" >
 
@@ -35,13 +31,12 @@
       data-toggle="modal" data-target="#selectedImageModal"
                 (click)=setSelectedImage(image) alt="">
                 </div>
-                <button class="btn btn-primary float-right" (click)=addItem()>Add to cart</button>
+                <button class="btn btn-primary float-right" (click)=addItem(image)>Add to cart</button>
                 <p>title: {{image.title}}</p>
                 <p>Description: {{image.description}}</p>
                 <p>Price:{{image.price}}</p>
                 
      </div>
-    </div>
     </div>
 </div>
   <!--<app-food [datasource]=images></app-food>-->
