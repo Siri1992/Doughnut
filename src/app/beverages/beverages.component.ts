@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import {CartService} from '../cart.service';
+import {Subscription} from 'rxjs';
 @Component({
   selector: 'app-beverages',
   templateUrl: './beverages.component.html',
@@ -7,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BeveragesComponent implements OnInit {
 beveragesImages;
-  constructor() {
+subs:Subscription;
+
+  constructor(public cartService: CartService) {
     this.beveragesImages=[
       {"url":"../../assets/library_01.jpeg","title":"title1","description":"description1","price":"$20"},
       {"url":"../../assets/library_02.jpeg","title":"title2","description":"description2","price":"$30"},
@@ -23,6 +26,7 @@ beveragesImages;
    }
 
   ngOnInit() {
+
   }
 
   @Input() datasource;

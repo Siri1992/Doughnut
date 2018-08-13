@@ -7,12 +7,16 @@ import { FoodComponent } from './food/food.component';
   providedIn: 'root'
 })
 export class CartService {
-  private items: FoodComponent[] = [];
-  private total = new Subject<any>();
-
-  constructor() { }
+  public items: FoodComponent[] = [];
+  public total = new Subject<any>();
+  public cartItems = new Subject<any>();
+  public cartState=this.cartItems.asObservable();
+  constructor() {
+    
+   }
 
   getTotal(){
+    console.log(this.items);
     return this.total.asObservable();
   }
   // calcTotal(){
@@ -24,6 +28,8 @@ export class CartService {
   // }
   addItem(item:any){
     this.items.push(item);
+
     this.total.next(this.items);
+    localStorage.setItem('items',JSON.stringify(this.items));
   }
 }
