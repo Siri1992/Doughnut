@@ -32,4 +32,8 @@ export class CartService {
     this.total.next(this.items);
     localStorage.setItem('items',JSON.stringify(this.items));
   }
+
+  removeItem(item:any){
+  this.items.splice(item,1)
+  }
 }
