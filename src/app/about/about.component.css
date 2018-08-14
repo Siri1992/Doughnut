@@ -4,16 +4,19 @@ h2{
 .text-center {
 text-align: center!important;
 }
-.container{
+.container-fluid{
     background-color: #333 !important;
-    color: white;
+    
 }
-.jumbotron{
-    background-color: #333 !important;
+.topBuffer h2, p{
+color:#ffffff;
+}
+
+.about-image{
     background: url("../../assets/background.jpg") no-repeat;
     background-size:cover;
     height:35em;
-    background-position:center; 
+    /*background-position:center;*/ 
 }
 .topBuffer {
     margin-top:6%;
@@ -22,5 +25,6 @@ text-align: center!important;
     margin-top: 1rem!important;
     margin-left: 4rem !important;
     margin-bottom: 1rem !important;
-    color: #5bd1d3 !important;
+    color: #2f8384 !important;
+    text-align:center;
 }
