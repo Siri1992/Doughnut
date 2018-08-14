@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {CartService} from '../cart.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -8,6 +9,8 @@ import {CartService} from '../cart.service';
 })
 export class CartComponent implements OnInit {
   items: any[] = [];
+  subscription:Subscription;
+  total:any
   
   constructor(private cartService:CartService) {
    // this.items = JSON.parse(localStorage.getItem('items'));
@@ -16,12 +19,15 @@ export class CartComponent implements OnInit {
 
    ngOnInit() {
     this.items = JSON.parse(localStorage.getItem('items'));
-     console.log(this.items[0].url)
+     console.log(this.items)
     
-   }
+   };
 
-   removeItemFromCart(item:any): void {
-    this.cartService.removeItem(item);
+
+   removeItemFromCart(item:any){
+     
+     this.cartService.removeItem(item);
+     console.log(item)
 }
 
 }
