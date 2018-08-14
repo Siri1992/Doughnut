@@ -21,6 +21,9 @@ import { CartComponent } from './cart/cart.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import { CartService } from './cart.service';
 import { ErrorComponent } from './error/error.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
+
 const appRoutes: Routes = [
   { path:'', component:HomeComponent},
   { path: 'about', component: AboutComponent },
@@ -32,6 +35,9 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'cart', component:CartComponent },
   { path: 'error', component: ErrorComponent},
+  { path: 'checkout', component: CheckoutComponent},
+  { path: 'home', component: HomeComponent},
+  { path: 'thankyou', component: ThankyouComponent},
   { path: '**', component: HomeComponent}
 ];
 @NgModule({
@@ -51,7 +57,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     CartComponent,
     SearchfilterPipe,
-    ErrorComponent
+    ErrorComponent,
+    CheckoutComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,
