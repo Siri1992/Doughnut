@@ -27,6 +27,11 @@ export class CartService {
   //   return sum;
   // }
   addItem(item:any){
+
+    if(this.items.indexOf(item)!==-1){
+      return;
+    }
+    
     this.items.push(item);
 
     this.total.next(this.items);
@@ -35,6 +40,9 @@ export class CartService {
   }
 
   removeItem(item:any){
-  this.items.splice(item,1)
+  this.items.splice(item,1);
+  console.log(this.items)
+  this.total.next(this.items);
+  // localStorage.removeItem('items');
   }
 }
