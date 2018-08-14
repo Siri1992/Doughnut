@@ -2,7 +2,18 @@
     margin-top: 1rem!important;
     margin-left: 4rem !important;
     margin-bottom: 1rem !important;
-    color: #5bd1d3 !important;
+    color: #368f91 !important;
+}
+.card-title{
+  color:#080a0b !important;
+}
+.card-body h1{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+mat-grid-tile[_ngcontent-c4] {
+  background: #8ccfe5 !important;
 }
 .example-small-box, .example-large-box {
     display: flex;
