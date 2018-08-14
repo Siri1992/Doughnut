@@ -42,3 +42,9 @@ img{
 	table#cart tfoot td .btn{display:block;}
 	
 }
+.btn-success{
+	color: #ffffff;
+    background-color: #0000ff;
+    border-color: #0000ff;
+}
+
