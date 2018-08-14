@@ -27,21 +27,20 @@ export class CartService {
   //   return sum;
   // }
   addItem(item:any){
-
+//alert();
     if(this.items.indexOf(item)!==-1){
       return;
     }
-    
     this.items.push(item);
-
     this.total.next(this.items);
     localStorage.setItem('items',JSON.stringify(this.items));
-  }
-
+    
+  } 
   removeItem(item:any){
-  this.items.splice(item,1);
-  console.log(this.items)
+      //   alert("i am delete");
+    this.items.splice(item,1);
+  //console.log(this.items)
   this.total.next(this.items);
-  // localStorage.removeItem('items');
+  localStorage.clear();
   }
 }

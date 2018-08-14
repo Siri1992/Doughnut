@@ -18,16 +18,20 @@ export class CartComponent implements OnInit {
    }
 
    ngOnInit() {
+   //alert("Hi");
     this.items = JSON.parse(localStorage.getItem('items'));
-     console.log(this.items)
-    
+     console.log(this.items);
    };
-
-
    removeItemFromCart(item:any){
-     
+     //alert("Hi");
+     this.items.splice(item,1);
      this.cartService.removeItem(item);
-     console.log(item)
+     console.log(item);
+  //    this.items.splice(item,1);
+  // console.log(this.items)
+  // this.total.next(this.items);
+     localStorage.clear();
+     
 }
 
 }

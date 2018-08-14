@@ -19,6 +19,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
    this.subscription= this.cartService.getTotal().subscribe((res)=>{
       console.log(res);
       this.total = res.length;
+      console.log(res.length);
+      if(res.length==0){
+        
+      }
     });
   }
   ngOnDestroy(){
