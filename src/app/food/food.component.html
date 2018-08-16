@@ -24,12 +24,12 @@
   
   <div id="thumbnailsList" style="padding-top: 10px;" >
       <div class="row mb-3">
-     <div *ngFor="let image of images | searchfilter:searchMe" class="col-md-4" >
+     <div *ngFor="let image of images | searchfilter:searchMe" class="col-md-4" tabindex="0" >
 
        <div class="card">
         <img src="{{image.url}}"  class="img-fluid"
       data-toggle="modal" data-target="#selectedImageModal"
-                (click)=setSelectedImage(image) alt="">
+                (click)=setSelectedImage(image) alt="Product Image">
                 </div>
                 <button class="btn btn-primary float-right" (click)=addItem(image)>Add to cart</button>
                 <p>title: {{image.title}}</p>

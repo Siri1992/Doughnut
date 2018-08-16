@@ -1,19 +1,19 @@
 <div class="container">
   <h1>Your cart</h1>
   <!--<p  *ngIf="items.length===0">There is know item in cart</p>-->
-    <table id="cart" class="table table-hover table-condensed">
-              <thead>
+    <table id="cart" class="table table-hover table-condensed" >
+              <thead >
               <tr>
-                <th style="width:50%">Product</th>
-                <th style="width:10%">Price</th>
-                <th style="width:8%">Quantity</th>
-                <th style="width:22%" class="text-center">Subtotal</th>
-                <th style="width:10%"></th>
+                <th style="width:50%" id="product">Product</th>
+                <th style="width:10%" id="price">Price</th>
+                <th style="width:8%" id="quantity">Quantity</th>
+                <th style="width:22%" class="text-center" id="subtotal">Subtotal</th>
+                <th style="width:10%" id="action">--</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let item of items" tabindex="0">
-                <td data-th="Product">
+                <td data-th="Product" header="produuct">
                   <div class="row">
                     <div class="col-md-2 hidden-xs"><img src="{{item.url}}" alt="..." class="img-responsive"/></div>
                     <div class="col-md-10">
@@ -22,12 +22,12 @@
                     </div>
                   </div>
                 </td>
-                <td data-th="Price">{{item.price}}</td>
-                <td data-th="Quantity">
+                <td data-th="Price" header="price">{{item.price}}</td>
+                <td data-th="Quantity" header="quantity">
                   <input type="number" class="form-control text-center" value="1" aria-label="Quantity">
                 </td>
-                <td data-th="Subtotal" class="text-center">{{item.price}}</td>
-                <td class="actions" data-th="">
+                <td data-th="Subtotal" class="text-center" header="subtotal">{{item.price}}</td>
+                <td class="actions" data-th="--" header="action">
                   <button class="btn btn-info btn-sm" title="edit"><i class="fa fa-refresh"></i></button>
                   <button class="btn btn-danger btn-sm" title="remove" (click)="removeItemFromCart(item)"><i class="fa fa-trash-o"></i></button>								
                 </td>
