@@ -1,7 +1,9 @@
 <div class="container">
   <h1>Your cart</h1>
+
   <p  *ngIf="!items || (items && items.length===0)">There is know item in cart</p>
     <table id="cart" class="table table-hover table-condensed" *ngIf=" items && items.length" >
+
               <thead >
               <tr>
                 <th style="width:50%" id="product">Product</th>

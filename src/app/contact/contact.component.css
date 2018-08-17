@@ -1,8 +1,9 @@
 .mt-5{
-    margin-top: 1rem!important;
-    margin-left: 4rem !important;
-    margin-bottom: 1rem !important;
-    color: #368f91 !important;
+  margin-top: 0.5rem!important;
+  margin-left: 4rem !important;
+  margin-bottom: 0.2rem !important;
+  color: #39999b !important;
+  font-size: 1.5em;
 }
 .card-title{
   color:#080a0b !important;

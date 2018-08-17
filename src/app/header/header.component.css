@@ -11,6 +11,9 @@ a{
 .nav-item a :hover{
     color: #5bd1d3;
 }
+.nav-item .btn-cust{
+    margin-right: 0.5em;
+}
 button[_ngcontent-c5]:hover{
     background-color: #00f;
     color: #fff;   
@@ -20,4 +23,8 @@ button[_ngcontent-c5]:hover{
 }
 .dropdown:hover>.dropdown-menu {
     display: block;
+  }
+  .btn-outline-primary
+  {
+    border-color: #ffffff !important;
   }
