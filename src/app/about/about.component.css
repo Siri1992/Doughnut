@@ -2,29 +2,29 @@ h2{
     text-align: center;
 }
 .text-center {
-text-align: center!important;
+text-align: center !important;
 }
 .container-fluid{
-    background-color: #333 !important;
-    
+    background-color: #333 !important;   
 }
-.topBuffer h2, p{
+.topBuffer h2{
 color:#ffffff;
+font-size: 1.5em;
 }
-
+.topBuffer p{
+    color:#ffffff;
+    font-size: 0.99em;
+    }
 .about-image{
     background: url("../../assets/background.jpg") no-repeat;
     background-size:cover;
-    height:35em;
-    /*background-position:center;*/ 
-}
-.topBuffer {
-    margin-top:6%;
+    height:27em;
+    background-position:center;  
 }
 .mt-5{
-    margin-top: 1rem!important;
+    margin-top: 0.5rem!important;
     margin-left: 4rem !important;
-    margin-bottom: 1rem !important;
-    color: #2f8384 !important;
-    text-align:center;
+    margin-bottom: 0.2rem !important;
+    color: #39999b !important;
+    font-size: 1.5em;
 }
