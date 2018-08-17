@@ -30,7 +30,8 @@ export class CartComponent implements OnInit {
   //    this.items.splice(item,1);
   // console.log(this.items)
   // this.total.next(this.items);
-     localStorage.clear();
+     //localStorage.clear();
+     localStorage.removeItem('items')
      
 }
 

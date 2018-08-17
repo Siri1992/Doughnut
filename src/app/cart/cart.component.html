@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Your cart</h1>
-  <!--<p  *ngIf="items.length===0">There is know item in cart</p>-->
-    <table id="cart" class="table table-hover table-condensed" >
+  <p  *ngIf="!items || (items && items.length===0)">There is know item in cart</p>
+    <table id="cart" class="table table-hover table-condensed" *ngIf=" items && items.length" >
               <thead >
               <tr>
                 <th style="width:50%" id="product">Product</th>
@@ -33,18 +33,19 @@
                 </td>
               </tr>
             </tbody>
-            <tfoot>
-              <!-- <tr class="visible-xs">
-                <td class="text-center"><strong>Total {{item.price}}</strong></td>
-              </tr> -->
-              <tr>
-                <td><a routerLink='/food' class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-                <td colspan="2" class="hidden-xs"></td>
-                <td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
-                <td><a routerLink='/checkout' class="btn btn-success btn-block mybtn">Checkout <i class="fa fa-angle-right"></i></a></td>
-              </tr>
-            </tfoot>
+         
           </table>
+          <div class="cartfooter">
+            <div class="row">
+            <div class="col-md-4"><a routerLink='/food' class="btn btn-warning"><i class="fa fa-angle-left"></i> 
+              Continue Shopping</a></div>
+           
+            <div class="hidden-xs text-center col-md-4"><strong>Total $1.99</strong></div>
+            <div class=" col-md-4"><a routerLink='/checkout' class="btn btn-success btn-block mybtn">Checkout
+               <i class="fa fa-angle-right"></i></a>
+              </div>
+          </div>
+          </div>
   </div>
 
   
